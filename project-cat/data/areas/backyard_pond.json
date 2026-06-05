@@ -1,0 +1,13 @@
+{
+	"area_id": "backyard_pond",
+	"display_name": "Backyard Pond",
+	"_note": "PLACEHOLDER MVP content for S-02 testing. Final fish roster (15 species) and balance are owned by S-03 Fish Album / S-07 Area Progression.",
+	"fish": [
+		{ "id": "pond_carp",       "display_name": "Pond Carp",       "rarity": "common",   "family": "cyprinidae",    "base_weight": 34, "base_size_cm": 32, "size_variance_cm": 8 },
+		{ "id": "bluegill",        "display_name": "Bluegill",        "rarity": "common",   "family": "centrarchidae", "base_weight": 30, "base_size_cm": 18, "size_variance_cm": 4 },
+		{ "id": "yellow_perch",    "display_name": "Yellow Perch",    "rarity": "uncommon", "family": "percidae",      "base_weight": 18, "base_size_cm": 24, "size_variance_cm": 5 },
+		{ "id": "brown_bullhead",  "display_name": "Brown Bullhead",  "rarity": "uncommon", "family": "ictaluridae",   "base_weight": 11, "base_size_cm": 28, "size_variance_cm": 6 },
+		{ "id": "golden_koi",      "display_name": "Golden Koi",      "rarity": "rare",     "family": "cyprinidae",    "base_weight": 4,  "base_size_cm": 45, "size_variance_cm": 12 },
+		{ "id": "moonscale_tench", "display_name": "Moonscale Tench", "rarity": "rare",     "family": "tincidae",      "base_weight": 3,  "base_size_cm": 40, "size_variance_cm": 10 }
+	]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Character"
+  short_description: "Generate consistent Cat & Hook character art"
+  default_prompt: "Generate a cat character using the Cat & Hook master character style guide and my individual character details."

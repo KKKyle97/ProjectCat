@@ -1,0 +1,155 @@
+[gd_scene load_steps=28 format=3 uid="uid://due0g0ivm7gqq"]
+
+[ext_resource type="Script" uid="uid://ckj2rugnt5xw6" path="res://src/gameplay/level/level_backyard_pond.gd" id="1_level"]
+[ext_resource type="Script" uid="uid://dofwm0ls1std0" path="res://src/gameplay/fishing/fishing_loop.gd" id="2_fishing_loop"]
+[ext_resource type="Script" path="res://src/gameplay/rod/rod_system.gd" id="3_rod_system"]
+[ext_resource type="Script" path="res://src/gameplay/bait/bait_system.gd" id="4_bait_system"]
+[ext_resource type="Texture2D" uid="uid://g5fkuo1b2jeu" path="res://sprites/frames/idle/idle_00.png" id="5_idle0"]
+[ext_resource type="Texture2D" uid="uid://coccp51wpnpi1" path="res://sprites/frames/idle/idle_01.png" id="6_idle1"]
+[ext_resource type="Texture2D" uid="uid://cqrfi32vrjljd" path="res://sprites/frames/idle/idle_02.png" id="7_idle2"]
+[ext_resource type="Texture2D" uid="uid://xt7rtijb4bip" path="res://sprites/frames/idle/idle_03.png" id="8_idle3"]
+[ext_resource type="Texture2D" uid="uid://cppojjyewbu2k" path="res://sprites/frames/cast/cast_00.png" id="9_cast0"]
+[ext_resource type="Texture2D" uid="uid://bhg4fiw3cpbo6" path="res://sprites/frames/cast/cast_01.png" id="10_cast1"]
+[ext_resource type="Texture2D" uid="uid://bcvkm5taeu8tn" path="res://sprites/frames/cast/cast_02.png" id="11_cast2"]
+[ext_resource type="Texture2D" uid="uid://k3bru6voparh" path="res://sprites/frames/cast/cast_03.png" id="12_cast3"]
+[ext_resource type="Texture2D" uid="uid://cj6w1xheo0tbd" path="res://sprites/frames/tug/tug_00.png" id="13_tug0"]
+[ext_resource type="Texture2D" uid="uid://c4r8xq1f7mjgs" path="res://sprites/frames/tug/tug_01.png" id="14_tug1"]
+[ext_resource type="Texture2D" uid="uid://bd34wugnbur7q" path="res://sprites/frames/tug/tug_02.png" id="15_tug2"]
+[ext_resource type="Texture2D" uid="uid://e7khmlkullri" path="res://sprites/frames/catch/catch_00.png" id="16_catch0"]
+[ext_resource type="Texture2D" uid="uid://df6iwhx3lby1n" path="res://sprites/frames/catch/catch_01.png" id="17_catch1"]
+[ext_resource type="Texture2D" uid="uid://cfac8ofg2p0ei" path="res://sprites/frames/catch/catch_02.png" id="18_catch2"]
+[ext_resource type="Texture2D" uid="uid://dihgkn4hijsgs" path="res://sprites/frames/catch/catch_03.png" id="19_catch3"]
+[ext_resource type="Texture2D" uid="uid://bwc5ug6ggwvg6" path="res://sprites/frames/sleep/sleep_00.png" id="20_sleep0"]
+[ext_resource type="Texture2D" uid="uid://c7cdbcyy0ihiv" path="res://sprites/frames/sleep/sleep_01.png" id="21_sleep1"]
+[ext_resource type="Texture2D" uid="uid://bgvydxb6878t" path="res://sprites/frames/sleep/sleep_02.png" id="22_sleep2"]
+[ext_resource type="Texture2D" uid="uid://ccam61yjqjb65" path="res://sprites/frames/items/bucket.png" id="23_bucket"]
+[ext_resource type="Texture2D" uid="uid://ce30k22qgk4mh" path="res://sprites/frames/items/bobber.png" id="24_bobber"]
+[ext_resource type="Texture2D" uid="uid://d0gwmv66y65vl" path="res://sprites/background_backyard_pond.png" id="25_bg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8surh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_cast0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cast1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cast2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cast3")
+}],
+"loop": false,
+"name": &"cast",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_catch0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_catch1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_catch2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_catch3")
+}],
+"loop": false,
+"name": &"catch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_idle0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_idle1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_idle2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_idle3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_sleep0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sleep1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sleep2")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_tug0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tug1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tug2")
+}],
+"loop": false,
+"name": &"tug",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bobber"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_bobber")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LevelBackyardPond" type="Node2D" unique_id=387083961]
+script = ExtResource("1_level")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1844132217]
+centered = false
+texture = ExtResource("25_bg")
+
+[node name="Bucket" type="Sprite2D" parent="." unique_id=872010531]
+position = Vector2(295, 95)
+texture = ExtResource("23_bucket")
+
+[node name="Cat" type="Node2D" parent="." unique_id=1073060834]
+position = Vector2(105, 165)
+
+[node name="CatSprite" type="AnimatedSprite2D" parent="Cat" unique_id=209863237]
+sprite_frames = SubResource("SpriteFrames_8surh")
+animation = &"idle"
+
+[node name="RodTip" type="Marker2D" parent="Cat" unique_id=312045678]
+position = Vector2(40, -20)
+
+[node name="FishingLine" type="Line2D" parent="." unique_id=2080877387]
+
+[node name="Bobber" type="AnimatedSprite2D" parent="FishingLine" unique_id=1679010484]
+sprite_frames = SubResource("SpriteFrames_bobber")
+
+[node name="FishingLoop" type="Node" parent="." unique_id=445892310]
+script = ExtResource("2_fishing_loop")
+
+[node name="RodSystem" type="Node" parent="." unique_id=556903421]
+script = ExtResource("3_rod_system")
+
+[node name="BaitSystem" type="Node" parent="." unique_id=667014532]
+script = ExtResource("4_bait_system")

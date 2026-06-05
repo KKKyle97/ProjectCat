@@ -1,0 +1,15 @@
+# Local editor/assistant state
+.claude/
+.codex/
+.mcp.json
+
+# Godot generated data
+**/.godot/
+**/android/
+
+# Engine template archives are large local dependencies, not project source.
+templates_4.6.3.tpz
+
+# OS files
+.DS_Store
+Thumbs.db

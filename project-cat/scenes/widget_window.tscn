@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://c1oebyx0yb733"]
+
+[ext_resource type="Script" uid="uid://duujl6gk3w6b6" path="res://src/core/widget_window.gd" id="1_widget"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frame"]
+bg_color = Color(0.12, 0.16, 0.21, 0.88)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.16, 0.2, 0.26, 0.94)
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="WidgetWindow" type="Control" unique_id=182672934]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_widget")
+
+[node name="Frame" type="Panel" parent="." unique_id=1738055959]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 480.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_frame")
+
+[node name="TitleLabel" type="Label" parent="Frame" unique_id=1470463749]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Cat & Hook"
+horizontal_alignment = 1
+
+[node name="MarketButton" type="Button" parent="Frame" unique_id=1219467552]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -44.0
+offset_right = 92.0
+offset_bottom = -12.0
+grow_vertical = 0
+text = "Market"
+
+[node name="AlbumButton" type="Button" parent="Frame" unique_id=726617400]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -44.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Album"
+
+[node name="PanelZone" type="Panel" parent="." unique_id=2036318918]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 480.0
+offset_bottom = 800.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="PanelLabel" type="Label" parent="PanelZone" unique_id=897159803]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -12.0
+offset_right = 140.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Market / Album panel (placeholder)"
+horizontal_alignment = 1
