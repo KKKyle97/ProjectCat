@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Environment"
+  short_description: "Generate consistent Cat & Hook environment art"
+  default_prompt: "Generate a Cat & Hook fishing environment using the master environment style guide and my biome details."
